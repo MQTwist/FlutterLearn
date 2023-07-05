@@ -1,8 +1,20 @@
+/// ---
+/// Description:
+/// Author: MQTwist
+/// Github: https://github.com/MQTwist
+/// Blog: https://www.jianshu.com/u/47a35e62c1bf
+/// Date: 2023-06-30 10:40:01
+/// LastEditors: MQTwist
+/// LastEditTime: 2023-06-30 11:02:14
+/// FilePath: /flutter/lib/main.dart
+/// Copyright © 2023 by MQTwist, All Rights Reserved.
+/// ---
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_application_1/Page/tabbar_controller.dart';
 import 'package:flutter_application_1/Page/widgets/UI/Cake.dart';
 import 'package:flutter_application_1/Page/widgets/UI/RandomNums.dart';
+import 'package:flutter_application_1/Page/widgets/UI/data_and_model_page.dart';
 import 'package:flutter_application_1/Page/widgets/UI/swiper_page.dart';
 import 'package:flutter_application_1/Page/widgets/UI/text_icon_button_page.dart';
 import 'package:flutter_application_1/Page/widgets/UI/ui_layout/RowAndColumn.dart';
@@ -64,6 +76,7 @@ class MyApp extends StatelessWidget {
         'swiper': (context) => const SwiperPage(),
         'TextIconButton': (context) => const TextIconButtonPage(),
         'ListView': (context) => const ListViewPage(),
+        'DataAndModelPage': (context) => const DataAndModelPage(),
       },
     );
   }

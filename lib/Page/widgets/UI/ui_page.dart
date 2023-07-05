@@ -16,6 +16,7 @@ class _UIPageState extends State<UIPage> {
     'StatelessPage',
     'Swiper',
     'TextIconButton',
+    'DataAndModelPage',
   ];
 
   @override
@@ -72,6 +73,9 @@ class _UIPageState extends State<UIPage> {
         break;
       case 5:
         Navigator.of(context).pushNamed('TextIconButton');
+        break;
+      case 6:
+        Navigator.of(context).pushNamed('DataAndModelPage');
         break;
       default:
     }
