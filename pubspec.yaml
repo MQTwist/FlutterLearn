@@ -43,6 +43,12 @@ dependencies:
   # 轮播
   flutter_swiper_null_safety: ^1.0.2
 
+  flutter_network_reachability:
+    git:
+      url: "https://git.daofengdj.com/flutter/flutter_network_status.git"
+      ref: "0.0.2"
+      
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

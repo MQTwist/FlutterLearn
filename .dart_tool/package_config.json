@@ -128,6 +128,18 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "connectivity_plus",
+      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.flutter-io.cn/connectivity_plus-4.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "connectivity_plus_platform_interface",
+      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.flutter-io.cn/connectivity_plus_platform_interface-1.2.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "convert",
       "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.flutter-io.cn/convert-3.1.1",
       "packageUri": "lib/",
@@ -150,6 +162,12 @@
       "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.flutter-io.cn/dart_style-2.3.2",
       "packageUri": "lib/",
       "languageVersion": "2.19"
+    },
+    {
+      "name": "dbus",
+      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.flutter-io.cn/dbus-0.7.8",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
     },
     {
       "name": "fake_async",
@@ -198,6 +216,12 @@
       "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.flutter-io.cn/flutter_lints-1.0.4",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_network_reachability",
+      "rootUri": "file:///Users/mac/.pub-cache/git/flutter_network_status-d2352fa685c7e9bfab69521f83ed87b08df916ff/",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
     },
     {
       "name": "flutter_slidable",
@@ -326,6 +350,12 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "nm",
+      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.flutter-io.cn/nm-0.5.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "octo_image",
       "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.flutter-io.cn/octo_image-1.0.2",
       "packageUri": "lib/",
@@ -384,6 +414,12 @@
       "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.flutter-io.cn/pedantic-1.11.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "petitparser",
+      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.flutter-io.cn/petitparser-5.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
     },
     {
       "name": "platform",
@@ -566,6 +602,12 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "xml",
+      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.flutter-io.cn/xml-6.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "yaml",
       "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.flutter-io.cn/yaml-3.1.2",
       "packageUri": "lib/",
@@ -578,7 +620,7 @@
       "languageVersion": "2.16"
     }
   ],
-  "generated": "2023-07-05T10:07:13.785273Z",
+  "generated": "2023-07-07T10:22:43.709758Z",
   "generator": "pub",
   "generatorVersion": "3.0.3"
 }

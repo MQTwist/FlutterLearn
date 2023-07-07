@@ -1,8 +1,19 @@
+/// ---
+/// Description:
+/// Author: MQTwist
+/// Github: https://github.com/MQTwist
+/// Blog: https://www.jianshu.com/u/47a35e62c1bf
+/// Date: 2023-06-30 10:40:01
+/// LastEditors: MQTwist
+/// LastEditTime: 2023-07-07 18:40:40
+/// FilePath: /flutter/lib/Page/tabbar_controller.dart
+/// Copyright © 2023 by MQTwist, All Rights Reserved.
+/// ---
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Page/widgets/UI/ui_page.dart';
-import 'package:flutter_application_1/Page/widgets/animation/animation_page.dart';
 import 'package:flutter_application_1/Page/widgets/home/HomePage.dart';
 import 'package:flutter_application_1/Page/widgets/me/me_page.dart';
+import 'package:flutter_application_1/Page/widgets/state/state_page.dart';
 
 class TabbarController extends StatefulWidget {
   const TabbarController({Key? key}) : super(key: key);
@@ -15,7 +26,7 @@ class _TabbarControllerState extends State<TabbarController> {
   List<Widget> pages = <Widget>[
     const HomePage(),
     const UIPage(),
-    const AnimationPage(),
+    const StatePage(),
     const MePage(),
   ];
   @override
@@ -30,7 +41,7 @@ class _TabbarControllerState extends State<TabbarController> {
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: '首页'),
           BottomNavigationBarItem(icon: Icon(Icons.view_agenda), label: 'UI'),
-          BottomNavigationBarItem(icon: Icon(Icons.animation), label: '动画'),
+          BottomNavigationBarItem(icon: Icon(Icons.manage_history), label: '状态'),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: '我的'),
         ],
         currentIndex: _selectedIndex,

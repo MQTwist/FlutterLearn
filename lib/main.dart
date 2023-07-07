@@ -5,39 +5,52 @@
 /// Blog: https://www.jianshu.com/u/47a35e62c1bf
 /// Date: 2023-06-30 10:40:01
 /// LastEditors: MQTwist
-/// LastEditTime: 2023-06-30 11:02:14
+/// LastEditTime: 2023-07-07 18:32:09
 /// FilePath: /flutter/lib/main.dart
 /// Copyright © 2023 by MQTwist, All Rights Reserved.
 /// ---
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_application_1/Page/tabbar_controller.dart';
-import 'package:flutter_application_1/Page/widgets/UI/Cake.dart';
-import 'package:flutter_application_1/Page/widgets/UI/RandomNums.dart';
-import 'package:flutter_application_1/Page/widgets/UI/data_and_model_page.dart';
-import 'package:flutter_application_1/Page/widgets/UI/swiper_page.dart';
-import 'package:flutter_application_1/Page/widgets/UI/text_icon_button_page.dart';
-import 'package:flutter_application_1/Page/widgets/UI/ui_layout/RowAndColumn.dart';
-import 'package:flutter_application_1/Page/widgets/UI/ui_layout/UILayout.dart';
-import 'package:flutter_application_1/Page/widgets/UI/ui_layout/column_page.dart';
-import 'package:flutter_application_1/Page/widgets/UI/ui_layout/container_page.dart';
-import 'package:flutter_application_1/Page/widgets/UI/ui_layout/expanded_page.dart';
-import 'package:flutter_application_1/Page/widgets/UI/ui_layout/list_view_page.dart';
-import 'package:flutter_application_1/Page/widgets/UI/ui_layout/stateless_page.dart';
-import 'package:flutter_application_1/Page/widgets/animation/animations/animation_widgets_test.dart';
-import 'package:flutter_application_1/Page/widgets/animation/animations/tweens/rect_tween_page.dart';
-import 'package:flutter_application_1/Page/widgets/animation/animations/tweens/tween_mix_page.dart';
-import 'package:flutter_application_1/Page/widgets/animation/animations/tweens/tween_position_page.dart';
-import 'package:flutter_application_1/Page/widgets/animation/animations/tweens/tween_animation_page.dart';
-import 'package:flutter_application_1/Page/widgets/animation/animations/tweens/tween_scale_page.dart';
+import 'package:flutter_application_1/Page/widgets/UI/base_ui/Cake.dart';
+import 'package:flutter_application_1/Page/widgets/UI/base_ui/RandomNums.dart';
+import 'package:flutter_application_1/Page/widgets/UI/base_ui/data_and_model_page.dart';
+import 'package:flutter_application_1/Page/widgets/UI/base_ui/swiper_page.dart';
+import 'package:flutter_application_1/Page/widgets/UI/base_ui/text_icon_button_page.dart';
+import 'package:flutter_application_1/Page/widgets/UI/base_ui/ui_layout/RowAndColumn.dart';
+import 'package:flutter_application_1/Page/widgets/UI/base_ui/ui_layout/UILayout.dart';
+import 'package:flutter_application_1/Page/widgets/UI/base_ui/ui_layout/column_page.dart';
+import 'package:flutter_application_1/Page/widgets/UI/base_ui/ui_layout/container_page.dart';
+import 'package:flutter_application_1/Page/widgets/UI/base_ui/ui_layout/expanded_page.dart';
+import 'package:flutter_application_1/Page/widgets/UI/base_ui/ui_layout/list_view_page.dart';
+import 'package:flutter_application_1/Page/widgets/UI/base_ui/ui_layout/stateless_page.dart';
+import 'package:flutter_application_1/Page/widgets/UI/animation/animations/animation_widgets_test.dart';
+import 'package:flutter_application_1/Page/widgets/UI/animation/animations/tweens/rect_tween_page.dart';
+import 'package:flutter_application_1/Page/widgets/UI/animation/animations/tweens/tween_mix_page.dart';
+import 'package:flutter_application_1/Page/widgets/UI/animation/animations/tweens/tween_position_page.dart';
+import 'package:flutter_application_1/Page/widgets/UI/animation/animations/tweens/tween_animation_page.dart';
+import 'package:flutter_application_1/Page/widgets/UI/animation/animations/tweens/tween_scale_page.dart';
 import 'package:flutter_application_1/Page/widgets/me/black_list_page.dart';
 import 'package:flutter_application_1/Page/widgets/me/fans_page.dart';
 import 'package:flutter_application_1/Page/widgets/me/focus_page.dart';
+import 'package:flutter_network_reachability/flutter_network_reachability.dart';
 
 void main() {
-  //打开视觉调试开关
+  /// 打开视觉调试开关
   debugPaintSizeEnabled = false;
   runApp(const MyApp());
+  testMethod();
+}
+
+testMethod() async {
+  FlutterNetworkReachability.instance.onConnectivityChanged.listen((event) {
+    debugPrint(event.toString());
+    switch (event) {
+      case NetworkReachabilityResult.bluetooth:
+        break;
+      default:
+    }
+  });
 }
 
 class MyApp extends StatelessWidget {
@@ -46,6 +59,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      // debugShowCheckedModeBanner: false,
       title: 'mq app',
       theme: ThemeData(
         primarySwatch: Colors.blue,

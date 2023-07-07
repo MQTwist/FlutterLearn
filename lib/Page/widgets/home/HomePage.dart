@@ -17,6 +17,7 @@ class HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('首页'),
+        elevation: 0,
       ),
       body: ListView(
         children: [
