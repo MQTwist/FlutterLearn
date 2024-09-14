@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Page/widgets/state/bloc/bloc_page.dart';
-import 'package:flutter_application_1/Page/widgets/state/provider/provider_page.dart';
-import 'package:flutter_application_1/Page/widgets/state/stream/stream_page.dart';
+import 'package:flutter_application_1/page/widgets/state/bloc/bloc_page.dart';
+import 'package:flutter_application_1/page/widgets/state/provider/provider_page.dart';
+import 'package:flutter_application_1/page/widgets/state/stream/stream_page.dart';
 
 /// ---
 /// Description:

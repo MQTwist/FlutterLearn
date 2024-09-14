@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Page/widgets/UI/base_ui/base_ui_home.dart';
-import 'package:flutter_application_1/Page/widgets/UI/animation/animation_page.dart';
+import 'package:flutter_application_1/page/widgets/ui/base_ui/base_ui_home.dart';
+import 'package:flutter_application_1/page/widgets/ui/animation/animation_page.dart';
 
 class UIPage extends StatelessWidget {
   const UIPage({Key? key}) : super(key: key);

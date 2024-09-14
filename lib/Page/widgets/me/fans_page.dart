@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_application_1/Page/model/me/me_model.dart';
-import 'package:flutter_application_1/Page/widgets/me/views/fans_view.dart';
+import 'package:flutter_application_1/page/model/me/me_model.dart';
+import 'package:flutter_application_1/page/widgets/me/views/fans_view.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
@@ -30,8 +30,7 @@ class _FansPageState extends State<FansPage> {
 
   @override
   Widget build(BuildContext context) {
-    Map<String, dynamic> title =
-        ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>;
+    Map<String, dynamic> title = ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>;
     return Scaffold(
       appBar: AppBar(
         title: Text(title['name']),

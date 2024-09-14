@@ -24,6 +24,7 @@ class _MePageState extends State<MePage> {
           return _row(index);
         },
         itemCount: dataArr.length,
+        cacheExtent: 60,
         separatorBuilder: (BuildContext context, int index) {
           return const Divider(
             height: 0.1,
@@ -37,13 +38,10 @@ class _MePageState extends State<MePage> {
   Widget _row(int index) {
     return InkWell(
       child: Container(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.only(left: 16, top: 10, bottom: 5),
         child: Row(
           children: [
-            Text(
-              dataArr[index],
-              style: const TextStyle(fontSize: 20),
-            ),
+            Text(dataArr[index], style: const TextStyle(fontSize: 20)),
           ],
         ),
       ),

@@ -24,9 +24,7 @@ class BlocPage extends StatelessWidget {
 }
 
 class Bloc {
-  int _count = 0;
-
   /// 创建StreamController
-  StreamController _streamController = StreamController<int>();
+  final StreamController _streamController = StreamController<int>();
   StreamSink get counter => _streamController.sink;
 }

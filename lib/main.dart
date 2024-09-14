@@ -11,29 +11,10 @@
 /// ---
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_application_1/Page/tabbar_controller.dart';
-import 'package:flutter_application_1/Page/widgets/UI/base_ui/Cake.dart';
-import 'package:flutter_application_1/Page/widgets/UI/base_ui/RandomNums.dart';
-import 'package:flutter_application_1/Page/widgets/UI/base_ui/data_and_model_page.dart';
-import 'package:flutter_application_1/Page/widgets/UI/base_ui/swiper_page.dart';
-import 'package:flutter_application_1/Page/widgets/UI/base_ui/text_icon_button_page.dart';
-import 'package:flutter_application_1/Page/widgets/UI/base_ui/ui_layout/RowAndColumn.dart';
-import 'package:flutter_application_1/Page/widgets/UI/base_ui/ui_layout/UILayout.dart';
-import 'package:flutter_application_1/Page/widgets/UI/base_ui/ui_layout/column_page.dart';
-import 'package:flutter_application_1/Page/widgets/UI/base_ui/ui_layout/container_page.dart';
-import 'package:flutter_application_1/Page/widgets/UI/base_ui/ui_layout/expanded_page.dart';
-import 'package:flutter_application_1/Page/widgets/UI/base_ui/ui_layout/list_view_page.dart';
-import 'package:flutter_application_1/Page/widgets/UI/base_ui/ui_layout/stateless_page.dart';
-import 'package:flutter_application_1/Page/widgets/UI/animation/animations/animation_widgets_test.dart';
-import 'package:flutter_application_1/Page/widgets/UI/animation/animations/tweens/rect_tween_page.dart';
-import 'package:flutter_application_1/Page/widgets/UI/animation/animations/tweens/tween_mix_page.dart';
-import 'package:flutter_application_1/Page/widgets/UI/animation/animations/tweens/tween_position_page.dart';
-import 'package:flutter_application_1/Page/widgets/UI/animation/animations/tweens/tween_animation_page.dart';
-import 'package:flutter_application_1/Page/widgets/UI/animation/animations/tweens/tween_scale_page.dart';
-import 'package:flutter_application_1/Page/widgets/me/black_list_page.dart';
-import 'package:flutter_application_1/Page/widgets/me/fans_page.dart';
-import 'package:flutter_application_1/Page/widgets/me/focus_page.dart';
-import 'package:flutter_network_reachability/flutter_network_reachability.dart';
+import 'package:flutter_application_1/mq_router.dart';
+import 'package:flutter_application_1/page/tabbar_controller.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/route_manager.dart';
 
 void main() {
   /// 打开视觉调试开关
@@ -43,14 +24,14 @@ void main() {
 }
 
 testMethod() async {
-  FlutterNetworkReachability.instance.onConnectivityChanged.listen((event) {
-    debugPrint(event.toString());
-    switch (event) {
-      case NetworkReachabilityResult.bluetooth:
-        break;
-      default:
-    }
-  });
+  // FlutterNetworkReachability.instance.onConnectivityChanged.listen((event) {
+  //   debugPrint(event.toString());
+  //   switch (event) {
+  //     case NetworkReachabilityResult.bluetooth:
+  //       break;
+  //     default:
+  //   }
+  // });
 }
 
 class MyApp extends StatelessWidget {
@@ -58,40 +39,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      // debugShowCheckedModeBanner: false,
-      title: 'mq app',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        primaryColor: Colors.white,
+    return ScreenUtilInit(
+      designSize: const Size(375, 812),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      child: GetMaterialApp(
+        opaqueRoute: false,
+        color: Colors.transparent,
+        debugShowCheckedModeBanner: false,
+        routes: MqRouter.routerMap,
+        home: const TabbarController(),
+        theme: ThemeData(appBarTheme: const AppBarTheme(scrolledUnderElevation: 0)),
       ),
-      home: const TabbarController(),
-      routes: <String, WidgetBuilder>{
-        'LikeNum': (context) => const RandomNums(),
-        'UI/H': (context) => const UILayout(),
-        'Cake': (context) => const Cake(),
-        'R&C': (context) => const RowAndColumn(),
-        'Fans': (context) => const FansPage(),
-        'Focus': (context) => const FocusPage(),
-        'BlackList': (context) => const BlackListPage(),
-        'Stateless': (context) => const StatelessPage(
-              backgroudColor: Colors.yellow,
-              content: '我的StatelessWidget',
-            ),
-        'Column': (context) => const ColumnPage(),
-        'Expanded': (context) => const ExpandedPage(),
-        'Container': (context) => const ContainerPage(),
-        'Tweens': (context) => const TweenAnimationPage(),
-        'TweenPosition': (context) => const TweenPositionPage(),
-        'TweenScale': (context) => const TweenScalePage(),
-        'TweenMix': (context) => const TweenMixPage(),
-        'TweenRect': (context) => const RectTweenPage(),
-        'animTest': (context) => const AnimatedWidgetsTest(),
-        'swiper': (context) => const SwiperPage(),
-        'TextIconButton': (context) => const TextIconButtonPage(),
-        'ListView': (context) => const ListViewPage(),
-        'DataAndModelPage': (context) => const DataAndModelPage(),
-      },
     );
   }
 }

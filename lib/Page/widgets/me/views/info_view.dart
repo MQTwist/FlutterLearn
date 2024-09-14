@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Page/model/me/me_model.dart';
+import 'package:flutter_application_1/page/model/me/me_model.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class InfoView extends StatelessWidget {
@@ -68,15 +68,13 @@ class InfoView extends StatelessWidget {
         decoration: BoxDecoration(
           color: const Color(0xFFF5F5F7),
           borderRadius: BorderRadius.circular(height / 2),
-          border:
-              item.state == 1 ? Border.all(width: 1, color: Colors.blue) : null,
+          border: item.state == 1 ? Border.all(width: 1, color: Colors.blue) : null,
         ),
         child: Container(
           margin: const EdgeInsets.fromLTRB(15, 5, 15, 5),
           child: Text(
             stateStr,
-            style:
-                TextStyle(fontFamily: 'Medium', fontSize: 12, color: textColor),
+            style: TextStyle(fontFamily: 'Medium', fontSize: 12, color: textColor),
           ),
         ),
       ),

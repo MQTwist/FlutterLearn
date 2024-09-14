@@ -10,10 +10,11 @@
 /// Copyright © 2023 by MQTwist, All Rights Reserved.
 /// ---
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Page/widgets/UI/ui_page.dart';
-import 'package:flutter_application_1/Page/widgets/home/HomePage.dart';
-import 'package:flutter_application_1/Page/widgets/me/me_page.dart';
-import 'package:flutter_application_1/Page/widgets/state/state_page.dart';
+import 'package:flutter_application_1/page/widgets/algorithm/algorithm_page.dart';
+import 'package:flutter_application_1/page/widgets/ui/ui_page.dart';
+import 'package:flutter_application_1/page/widgets/home/HomePage.dart';
+import 'package:flutter_application_1/page/widgets/me/me_page.dart';
+import 'package:flutter_application_1/page/widgets/state/state_page.dart';
 
 class TabbarController extends StatefulWidget {
   const TabbarController({Key? key}) : super(key: key);
@@ -27,6 +28,7 @@ class _TabbarControllerState extends State<TabbarController> {
     const HomePage(),
     const UIPage(),
     const StatePage(),
+    const AlgorithmPage(),
     const MePage(),
   ];
   @override
@@ -42,6 +44,7 @@ class _TabbarControllerState extends State<TabbarController> {
           BottomNavigationBarItem(icon: Icon(Icons.home), label: '首页'),
           BottomNavigationBarItem(icon: Icon(Icons.view_agenda), label: 'UI'),
           BottomNavigationBarItem(icon: Icon(Icons.manage_history), label: '状态'),
+          BottomNavigationBarItem(icon: Icon(Icons.alarm), label: '算法'),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: '我的'),
         ],
         currentIndex: _selectedIndex,

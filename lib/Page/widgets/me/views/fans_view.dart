@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Page/model/me/me_model.dart';
-import 'package:flutter_application_1/Page/widgets/me/views/info_view.dart';
+import 'package:flutter_application_1/page/model/me/me_model.dart';
+import 'package:flutter_application_1/page/widgets/me/views/info_view.dart';
 
 class FansView extends StatelessWidget {
   const FansView({Key? key, required this.item}) : super(key: key);
