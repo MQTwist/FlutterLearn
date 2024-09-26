@@ -18,12 +18,12 @@ class RowAndColumn extends StatelessWidget {
   }
 
   Column _column() {
-    return Column(
+    return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[
+          children: <Widget>[
             Text(" see you again "),
             Text(" I am Twist "),
           ],
@@ -31,7 +31,7 @@ class RowAndColumn extends StatelessWidget {
         Row(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[
+          children: <Widget>[
             Text(" see you again "),
             Text(" I am Twist "),
           ],
@@ -39,7 +39,7 @@ class RowAndColumn extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.end,
           textDirection: TextDirection.rtl,
-          children: const <Widget>[
+          children: <Widget>[
             Text(" see you again "),
             Text(" I am Twist "),
           ],
@@ -47,7 +47,7 @@ class RowAndColumn extends StatelessWidget {
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           verticalDirection: VerticalDirection.up,
-          children: const <Widget>[
+          children: <Widget>[
             Text(
               " see you again ",
               style: TextStyle(fontSize: 30.0),

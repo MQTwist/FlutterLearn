@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 
 /// ---
 /// Description:
@@ -20,6 +21,7 @@ List<String> _dataArr = [
   'Swiper',
   'TextIconButton',
   'DataAndModelPage',
+  'RepaintBoundaryPage',
 ];
 
 class BaseUiHome extends StatelessWidget {
@@ -54,29 +56,22 @@ class BaseUiHome extends StatelessWidget {
   }
 
   _pushNewPage(BuildContext context, int index) {
+    String route = _dataArr[index];
     switch (index) {
       case 0:
-        Navigator.of(context).pushNamed('LikeNum');
+        Get.toNamed('LikeNum');
         break;
       case 1:
-        Navigator.of(context).pushNamed('UI/H');
+        Get.toNamed('UI/H');
         break;
       case 2:
-        Navigator.of(context).pushNamed('Cake');
+        Get.toNamed('Cake');
         break;
       case 3:
-        Navigator.of(context).pushNamed('Stateless');
-        break;
-      case 4:
-        Navigator.of(context).pushNamed('swiper');
-        break;
-      case 5:
-        Navigator.of(context).pushNamed('TextIconButton');
-        break;
-      case 6:
-        Navigator.of(context).pushNamed('DataAndModelPage');
+        Get.toNamed('Stateless');
         break;
       default:
+        Get.toNamed(route);
     }
   }
 }

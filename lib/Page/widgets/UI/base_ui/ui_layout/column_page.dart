@@ -22,12 +22,12 @@ class ColumnPage extends StatelessWidget {
       ),
       body: Container(
         color: Colors.red,
-        child: Column(
+        child: const Column(
           // 默认值
           mainAxisAlignment: MainAxisAlignment.start,
           // 默认值
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: const <Widget>[
+          children: <Widget>[
             Expanded(child: Text("see")),
             Text("you"),
             Text("again"),

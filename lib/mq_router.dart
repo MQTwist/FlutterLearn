@@ -12,6 +12,7 @@ import 'package:flutter_application_1/page/widgets/ui/animation/animations/tween
 import 'package:flutter_application_1/page/widgets/ui/base_ui/Cake.dart';
 import 'package:flutter_application_1/page/widgets/ui/base_ui/RandomNums.dart';
 import 'package:flutter_application_1/page/widgets/ui/base_ui/data_and_model_page.dart';
+import 'package:flutter_application_1/page/widgets/ui/base_ui/repaint_boundary_page.dart';
 import 'package:flutter_application_1/page/widgets/ui/base_ui/swiper_page.dart';
 import 'package:flutter_application_1/page/widgets/ui/base_ui/text_icon_button_page.dart';
 import 'package:flutter_application_1/page/widgets/ui/base_ui/ui_layout/RowAndColumn.dart';
@@ -35,6 +36,7 @@ class MqRouter {
           backgroudColor: Colors.yellow,
           content: '我的StatelessWidget',
         ),
+    'Row': (context) => const RowAndColumn(),
     'Column': (context) => const ColumnPage(),
     'Expanded': (context) => const ExpandedPage(),
     'Container': (context) => const ContainerPage(),
@@ -49,5 +51,6 @@ class MqRouter {
     'ListView': (context) => const ListViewPage(),
     'DataAndModelPage': (context) => const DataAndModelPage(),
     'AgentSalePage': (context) => const AgentSalePage(),
+    'RepaintBoundaryPage': (context) => const RepaintBoundaryPage(),
   };
 }

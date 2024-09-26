@@ -23,6 +23,7 @@ class _AgentSalePageState extends State<AgentSalePage> {
     if (agent == null) {
       return 0;
     }
+    debugPrint(">>>agent name:${agent.name}");
     return _calcAll(agent.left) + _calcAll(agent.right) + agent.directSales;
   }
 

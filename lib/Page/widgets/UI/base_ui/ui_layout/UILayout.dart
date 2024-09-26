@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 
 class UILayout extends StatefulWidget {
   const UILayout({Key? key}) : super(key: key);
@@ -54,6 +55,6 @@ class UILayoutState extends State<UILayout> {
 
   _pushPage(int index) {
     String route = dataArr[index];
-    Navigator.of(context).pushNamed(route);
+    Get.toNamed(route);
   }
 }
